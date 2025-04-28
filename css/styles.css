@@ -1,0 +1,233 @@
+/* Variables */
+:root {
+    --primary-color: #5d3fd3;
+    --secondary-color: #2a2a2a;
+    --accent-color: #f7b32b;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav li a:hover {
+    color: var(--accent-color);
+}
+
+/* Sección HERO */
+.hero {
+    background: url('../assets/img/eldenRing.webp') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Categorías */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.category-list-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.category-list-item:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Galería de Productos */
+.gallery > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.gallery-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-card h3 {
+    margin-top: 1rem;
+}
+
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+/* Llamado a la Acción */
+.cta {
+    background-color: var(--accent-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn.secondary {
+    background-color: var(--secondary-color);
+    margin-left: 1rem;
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Contacto */
+.contact-form form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: fit-content;
+    align-self: center;
+}
+
+/* Producto */
+.product-detail article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.product-detail img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-detail .info {
+    max-width: 500px;
+}
+
+.product-detail .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}/* Media Queries ---------------- */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .product-detail article {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
